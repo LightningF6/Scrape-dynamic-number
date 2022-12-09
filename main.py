@@ -26,11 +26,11 @@ def clean_text(text):
 
 def main():
     driver = get_driver()
-    driver.find_element(by="id", value="id_username").send_keys("automated")
+    driver.find_element(by="id", value="id_username").send_keys(
+        "automated")  #username = automated
     time.sleep(2)
-    driver.find_element(by="id",
-                        value="id_password").send_keys("automatedautomated" +
-                                                       Keys.RETURN)
+    driver.find_element(by="id", value="id_password").send_keys(
+        "automatedautomated" + Keys.RETURN)  #password = automatedautomated
     time.sleep(2)
     driver.find_element(by="xpath", value="/html/body/nav/div/a").click()
     time.sleep(2)
